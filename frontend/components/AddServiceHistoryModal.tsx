@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { api } from '@/lib/api'
+import { api } from '../lib/api'
 import { X, Save, AlertCircle, Calendar, User, Building, Wrench, FileText } from 'lucide-react'
 
 interface AddServiceHistoryModalProps {

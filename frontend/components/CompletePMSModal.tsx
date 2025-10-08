@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { api } from '@/lib/api'
+import { api } from '../lib/api'
 import { X, CheckCircle, User, FileText } from 'lucide-react'
 import Loading from '@/components/Loading'
 

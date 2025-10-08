@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { X, Upload, FileSpreadsheet, AlertCircle, CheckCircle } from 'lucide-react'
-import { api } from '@/lib/api'
+import { api } from '../lib/api'
 
 interface ImportModalProps {
   isOpen: boolean

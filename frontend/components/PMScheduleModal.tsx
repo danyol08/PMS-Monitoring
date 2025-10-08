@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { api } from '@/lib/api'
+import { api } from '../lib/api'
 import { X, Calendar, Clock } from 'lucide-react'
 
 interface PMScheduleModalProps {

@@ -1,17 +1,17 @@
 'use client'
 
-import { useAuth } from '@/lib/auth-context'
+import { useAuth } from '../../lib/auth-context'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import DashboardLayout from '@/components/DashboardLayout'
 import StatsCards from '@/components/StatsCards'
 import UpcomingMaintenance from '@/components/UpcomingMaintenance'
 import ContractsChart from '@/components/ContractsChart'
-import { api } from '@/lib/api'
-import { supabase } from '@/lib/supabase'
+import { api } from '../../lib/api'
+import { supabase } from '../../lib/supabase'
 import { Calendar, X, Bell } from 'lucide-react'
 import Loading from '@/components/Loading'
-import { eventBus, EVENTS } from '@/lib/event-bus'
+import { eventBus, EVENTS } from '../../lib/event-bus'
 
 interface DashboardStats {
   total_contracts: number

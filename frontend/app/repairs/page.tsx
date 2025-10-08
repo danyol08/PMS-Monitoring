@@ -1,8 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { supabase } from '@/lib/supabase'
-import { useAuth } from '@/lib/auth-context'
+import { supabase } from '../../lib/supabase'
+import { useAuth } from '../../lib/auth-context'
 import { useRouter } from 'next/navigation'
 import DashboardLayout from '@/components/DashboardLayout'
 import RepairModal from '@/components/RepairModal'

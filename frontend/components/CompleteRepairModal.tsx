@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { X, CheckCircle, FileText, User } from 'lucide-react'
-import { useAuth } from '@/lib/auth-context'
-import { eventBus, EVENTS } from '@/lib/event-bus'
+import { useAuth } from '../lib/auth-context'
+import { eventBus, EVENTS } from '../lib/event-bus'
 
 interface CompleteRepairModalProps {
   isOpen: boolean

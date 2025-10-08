@@ -1,10 +1,10 @@
 'use client'
 
-import { useAuth } from '@/lib/auth-context'
+import { useAuth } from '../../lib/auth-context'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import DashboardLayout from '@/components/DashboardLayout'
-import { api } from '@/lib/api'
+import { api } from '../../lib/api'
 import { Plus, Search, Edit, Trash2, Shield, User, Mail, Phone, MapPin, Calendar, Activity } from 'lucide-react'
 import Loading from '@/components/Loading'
 

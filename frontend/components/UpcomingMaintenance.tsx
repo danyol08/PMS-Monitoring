@@ -1,11 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { api } from '@/lib/api'
+import { api } from '../lib/api'
 import { format } from 'date-fns'
 import Link from 'next/link'
 import CompletePMSModal from './CompletePMSModal'
-import { eventBus, EVENTS } from '@/lib/event-bus'
+import { eventBus, EVENTS } from '../lib/event-bus'
 import { CheckCircle, Clock, AlertTriangle, Calendar, MapPin, Wrench, ChevronRight } from 'lucide-react'
 
 interface ContractSummary {

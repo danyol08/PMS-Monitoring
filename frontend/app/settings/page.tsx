@@ -1,7 +1,7 @@
 'use client'
 
-import { useAuth } from '@/lib/auth-context'
-import api from '@/lib/api'
+import { useAuth } from '../../lib/auth-context'
+import api from '../../lib/api'
 import toast from 'react-hot-toast'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -10,7 +10,7 @@ import EmptyState from '@/components/EmptyState'
 import UserEditModal from '@/components/UserEditModal'
 import ServiceHistorySetup from '@/components/ServiceHistorySetup'
 import { Save, Shield, Users as UsersIcon, Plus, Search, Edit, Trash2, UserCheck, UserX, User as UserIcon, Settings as SettingsIcon, Database } from 'lucide-react'
-import { supabase } from '@/lib/supabase'
+import { supabase } from '../../lib/supabase'
 import { format } from 'date-fns'
 import Loading from '@/components/Loading'
 

@@ -1,8 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { supabase } from '@/lib/supabase'
-import { api } from '@/lib/api'
+import { supabase } from '../lib/supabase'
+import { api } from '../lib/api'
 import { User } from '@/types/user'
 import { Shield, Settings, User as UserIcon, Eye, EyeOff } from 'lucide-react'
 

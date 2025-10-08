@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { api } from '@/lib/api'
+import { api } from '../lib/api'
 import { X, Save, AlertCircle, CheckCircle, Calendar, User, Building, Wrench, FileText } from 'lucide-react'
 
 interface AddHardwareContractModalProps {

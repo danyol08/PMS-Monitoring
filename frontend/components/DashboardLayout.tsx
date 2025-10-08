@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Toaster } from 'react-hot-toast'
-import { useAuth } from '@/lib/auth-context'
+import { useAuth } from '../lib/auth-context'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {
