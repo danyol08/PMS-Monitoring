@@ -36,6 +36,7 @@ app.add_middleware(
         "https://your-pms-app.vercel.app",  # Vercel deployment
         "https://*.vercel.app",  # All Vercel domains
         "https://your-frontend-domain.com"
+        "https://pms-monitoring.onrender.com"
     ],
     allow_credentials=True,
     allow_methods=["*"],
