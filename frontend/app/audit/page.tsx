@@ -1,14 +1,14 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useAuth } from 'lib/auth-context'
+import { useAuth } from '../../lib/auth-context'
 import { useRouter } from 'next/navigation'
-import DashboardLayout from 'components/DashboardLayout'
-import PageHeader from 'components/PageHeader'
-import Breadcrumbs from 'components/Breadcrumbs'
-import EmptyState from 'components/EmptyState'
-import Loading from 'components/Loading'
-import { api } from 'lib/api'
+import DashboardLayout from '../../components/DashboardLayout'
+import PageHeader from '../../components/PageHeader'
+import Breadcrumbs from '../../components/Breadcrumbs'
+import EmptyState from '../../components/EmptyState'
+import Loading from '../../components/Loading'
+import { api } from '../../lib/api'
 import { format } from 'date-fns'
 import { 
   Search, 
