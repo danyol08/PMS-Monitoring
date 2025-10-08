@@ -1,0 +1,23 @@
+This is a binary file placeholder. In a real implementation, you would create an actual Excel file with the following columns:
+
+Required columns:
+- contract_id
+- service_date (YYYY-MM-DD format)
+- service_type
+- description
+- technician
+
+Optional columns:
+- contract_type (hardware, label)
+- status (completed, pending, cancelled)
+- service_report
+- company
+- location
+- model
+- serial
+- sales
+- sr_number
+
+Sample data:
+CONTRACT001 | 2024-01-15 | PMS | Preventive maintenance service | John Doe | hardware | completed | Service completed successfully | ABC Company | Main Office | Model X1 | SN123456 | Sales Rep 1 | SR001
+

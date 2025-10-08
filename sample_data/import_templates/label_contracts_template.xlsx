@@ -1,0 +1,25 @@
+This is a binary file placeholder. In a real implementation, you would create an actual Excel file with the following columns:
+
+Required columns:
+- sq
+- end_user  
+- model
+- serial
+
+Optional columns:
+- next_pms_schedule (YYYY-MM-DD format)
+- branch
+- technical_specialist
+- date_of_contract (YYYY-MM-DD format)
+- end_of_contract (YYYY-MM-DD format)
+- status
+- po_number
+- service_report
+- history
+- frequency
+- reports
+- documentation
+
+Sample data:
+LBL001 | XYZ Corp | Label Pro | LBL789012 | 2024-02-15 | East Branch | Jane Smith | 2024-02-01 | 2025-02-01 | active | PO456 | Label setup | No history | Quarterly | Report 2 | Documentation 2
+

@@ -1,0 +1,11 @@
+SQ,End User,Part Number,Serial,Next PMS Schedule,Branch,Technical Specialist,Date of Contract,End of Contract,Status,PO Number,Frequency,Documentation
+LB001,DEF Industries,LABEL-001,LBL001234,2024-02-20,Factory Floor,Mike Johnson,2023-10-01,2024-10-01,active,PO-LB-001,monthly,Label maintenance guidelines
+LB002,GHI Ltd,LABEL-002,LBL002345,2024-01-25,Production Line,Sarah Wilson,2023-08-01,2024-08-01,active,PO-LB-002,monthly,Production line labels
+LB003,JKL Corp,LABEL-003,LBL003456,2024-03-05,Quality Control,David Brown,2023-12-01,2024-12-01,active,PO-LB-003,quarterly,Quality control labels
+LB004,MNO Inc,LABEL-004,LBL004567,2024-01-15,Shipping Dept,Emily Davis,2023-05-01,2024-05-01,active,PO-LB-004,monthly,Shipping labels
+LB005,PQR Ltd,LABEL-005,LBL005678,2024-02-28,Warehouse,Chris Taylor,2023-11-01,2024-11-01,active,PO-LB-005,monthly,Warehouse labeling system
+
+
+
+
+

@@ -1,0 +1,24 @@
+This is a binary file placeholder. In a real implementation, you would create an actual Excel file with the following columns:
+
+Required columns:
+- sq
+- company_name
+- device_model
+- serial_number
+- issue_description
+
+Optional columns:
+- priority (low, medium, high, urgent)
+- status (pending, in_progress, completed, cancelled)
+- assigned_technician
+- estimated_completion (YYYY-MM-DD format)
+- actual_completion (YYYY-MM-DD format)
+- resolution_notes
+- parts_used
+- labor_hours (numeric)
+- total_cost (numeric)
+- customer_satisfaction (numeric 1-5)
+
+Sample data:
+REP001 | Tech Solutions | Printer Model A | PR123456 | Paper jam issue | high | pending | Mike Johnson | 2024-01-20 | | | | 2.5 | 150.00 | 4
+
