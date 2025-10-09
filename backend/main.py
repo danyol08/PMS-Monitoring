@@ -33,7 +33,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000", 
-        "pms-monitoring.vercel.app",  # Vercel deployment
+        "https://pms-monitoring.vercel.app,  # Vercel deployment
         "https://*.vercel.app",  # All Vercel domains
         "https://your-frontend-domain.com"
         "https://pms-monitoring.onrender.com"
