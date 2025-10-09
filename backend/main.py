@@ -33,10 +33,9 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000", 
-        "https://pms-monitoring.vercel.app,  # Vercel deployment
-        "https://*.vercel.app",  # All Vercel domains
-        "https://your-frontend-domain.com"
-        "https://pms-monitoring.onrender.com"
+        "http://localhost:3000",
+        "https://pms-monitoring.vercel.app",  # Vercel deployment
+        "https://pms-monitoring.onrender.com"  # Backend URL (optional)
     ],
     allow_credentials=True,
     allow_methods=["*"],
