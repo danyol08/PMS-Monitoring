@@ -109,7 +109,7 @@ export default function AuditPage() {
       setLoadingAudits(false)
     }
   }
-
+  const [dateRange, setDateRange] = useState('7') // default 7 days
   const fetchAuditStats = async () => {
     try {
       const response = await api.get('/api/audit/stats', {
