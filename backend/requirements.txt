@@ -4,6 +4,7 @@ supabase
 python-multipart
 python-jose[cryptography]
 passlib[bcrypt]
+bcrypt==3.2.2
 python-dotenv
 pandas
 openpyxl
@@ -14,5 +15,3 @@ pydantic-settings
 httpx
 aiofiles
 email-validator
-
-
