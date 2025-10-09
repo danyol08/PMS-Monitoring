@@ -3,7 +3,7 @@
 import { useAuth } from '../../../lib/auth-context'
 import { useRouter } from 'next/navigation'
 import { useEffect, useMemo, useState } from 'react'
-import DashboardLayout from '@/components/DashboardLayout'
+import DashboardLayout from '../../../components/DashboardLayout'
 import { api } from '../../../lib/api'
 import Link from 'next/link'
 import { format } from 'date-fns'

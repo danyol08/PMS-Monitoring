@@ -3,16 +3,16 @@
 import { useAuth } from '../../../lib/auth-context'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import DashboardLayout from '@/components/DashboardLayout'
+import DashboardLayout from '../../../components/DashboardLayout'
 import { api } from '../../../lib/api'
 import { supabase } from '../../../lib/supabase'
 import { format } from 'date-fns'
 import { Plus, Search, Upload } from 'lucide-react'
-import ResponsiveTable from '@/components/ResponsiveTable'
-import LabelContractModal from '@/components/LabelContractModal'
-import ImportModal from '@/components/ImportModal'
-import { LabelContract } from '@/types/label-contract'
-import Loading from '@/components/Loading'
+import ResponsiveTable from '../../../components/ResponsiveTable'
+import LabelContractModal from '../../../components/LabelContractModal'
+import ImportModal from '../../../components/ImportModal'
+import { LabelContract } from '../../../types/label-contract'
+import Loading from '../../../components/Loading'
 
 export default function LabelContracts() {
   const { user, loading } = useAuth()

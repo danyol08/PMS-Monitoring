@@ -4,10 +4,10 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { useAuth } from '../../lib/auth-context'
 import { useRouter } from 'next/navigation'
-import DashboardLayout from '@/components/DashboardLayout'
+import DashboardLayout from '../../components/DashboardLayout'
 import { api } from '../../lib/api'
 import { Download, FileText, BarChart3, Calendar, Filter } from 'lucide-react'
-import Loading from '@/components/Loading'
+import Loading from '../../components/Loading'
 import { supabase } from '../../lib/supabase'
 import { format } from 'date-fns'
 

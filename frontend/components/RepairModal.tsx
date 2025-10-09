@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { supabase } from '../lib/supabase'
-import { Repair, RepairCreate, RepairUpdate, RepairStatus } from '@/types/repair'
+import { Repair, RepairCreate, RepairUpdate, RepairStatus } from '../types/repair'
 
 interface RepairModalProps {
   repair: Repair | null

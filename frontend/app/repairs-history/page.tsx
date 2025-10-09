@@ -3,12 +3,12 @@
 import { useState, useEffect } from 'react'
 import { useAuth } from '../../lib/auth-context'
 import { useRouter } from 'next/navigation'
-import DashboardLayout from '@/components/DashboardLayout'
-import ResponsiveTable from '@/components/ResponsiveTable'
+import DashboardLayout from '../../components/DashboardLayout'
+import ResponsiveTable from '../../components/ResponsiveTable'
 import { Search, Download } from 'lucide-react'
 import { format } from 'date-fns'
-import Loading from '@/components/Loading'
-import { RepairHistory } from '@/types/repair'
+import Loading from '../../components/Loading'
+import { RepairHistory } from '../../types/repair'
 import { api } from '../../lib/api'
 
 export default function RepairsHistoryPage() {

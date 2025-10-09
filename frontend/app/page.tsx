@@ -3,8 +3,8 @@
 import { useAuth } from '../lib/auth-context'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
-import LoginForm from '@/components/LoginForm'
-import Loading from '@/components/Loading'
+import LoginForm from '../components/LoginForm'
+import Loading from '../components/Loading'
 
 export default function Home() {
   const { user, loading } = useAuth()

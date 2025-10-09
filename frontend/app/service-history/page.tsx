@@ -3,13 +3,13 @@
 import { useAuth } from '../../lib/auth-context'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import DashboardLayout from '@/components/DashboardLayout'
+import DashboardLayout from '../../components/DashboardLayout'
 import { api } from '../../lib/api'
 import { format } from 'date-fns'
 import { Plus, Search, Filter, Calendar, Clock, CheckCircle, XCircle, Download, FileText, Eye, ExternalLink, Upload } from 'lucide-react'
-import Loading from '@/components/Loading'
-import ImportModal from '@/components/ImportModal'
-import AddServiceHistoryModal from '@/components/AddServiceHistoryModal'
+import Loading from '../../components/Loading'
+import ImportModal from '../../components/ImportModal'
+import AddServiceHistoryModal from '../../components/AddServiceHistoryModal'
 
 interface ServiceHistory {
   id: string

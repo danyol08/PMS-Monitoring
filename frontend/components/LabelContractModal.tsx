@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import api from '../lib/api'
-import { LabelContract } from '@/types/label-contract'
+import { LabelContract } from '../types/label-contract'
 
 interface LabelContractModalProps {
   contract: LabelContract | null
