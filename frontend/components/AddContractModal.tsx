@@ -242,7 +242,7 @@ export default function AddHardwareContractModal({
               <div className="space-y-1">
                 <label className="block text-sm font-medium text-gray-700">
                   <Wrench className="inline h-3 w-3 mr-1" />
-                  Part Number *
+                  Part Number 
                 </label>
                 <textarea 
                   name="model" 
@@ -250,7 +250,7 @@ export default function AddHardwareContractModal({
                   onChange={handleChange} 
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors text-sm" 
                   placeholder="Enter Part Number"
-                  required 
+                   
                 />
               </div>
 
@@ -258,7 +258,7 @@ export default function AddHardwareContractModal({
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700">
                   <FileText className="inline h-4 w-4 mr-1" />
-                  Serial Number *
+                  Serial Number
                 </label>
                 <textarea 
                   name="serial" 
@@ -266,7 +266,7 @@ export default function AddHardwareContractModal({
                   onChange={handleChange} 
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors" 
                   placeholder="Enter serial number"
-                  required 
+                   
                 />
               </div>
 
@@ -383,7 +383,7 @@ export default function AddHardwareContractModal({
               {/* PO Number */}
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700">
-                  PO Number *
+                  PO Number 
                 </label>
                 <input 
                   name="po_number" 
@@ -391,7 +391,7 @@ export default function AddHardwareContractModal({
                   onChange={handleChange} 
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors" 
                   placeholder="Enter PO number"
-                  required
+                  
                 />
               </div>
             </div>
