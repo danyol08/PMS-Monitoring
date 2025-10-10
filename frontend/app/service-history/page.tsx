@@ -1,5 +1,5 @@
 'use client'
-
+import * as XLSX from 'xlsx'
 import { useAuth } from '../../lib/auth-context'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -195,42 +195,48 @@ export default function ServiceHistory() {
     return options
   }
 
-  const exportServiceHistory = async (format: 'excel' | 'pdf') => {
-    setExporting(true)
-    try {
-      const params = new URLSearchParams()
-      if (monthFilter) {
-        params.append('month', monthFilter)
-      }
-      
-      const exportUrl = `/api/reports/service-history/export/${format}${params.toString() ? `?${params.toString()}` : ''}`
-      const response = await api.get(exportUrl, {
-        responseType: 'blob'
-      })
-      
-      const blob = new Blob([response.data])
-      const url = window.URL.createObjectURL(blob)
-      const link = document.createElement('a')
-      link.href = url
-      
-      // Generate filename with month if filtered
-      let filename = 'service_history'
-      if (monthFilter) {
-        const monthName = generateMonthOptions().find(opt => opt.value === monthFilter)?.label || monthFilter
-        filename = `service_history_${monthName.replace(' ', '_')}`
-      }
-      link.download = `${filename}.${format === 'excel' ? 'xlsx' : 'pdf'}`
-      document.body.appendChild(link)
-      link.click()
-      document.body.removeChild(link)
-      window.URL.revokeObjectURL(url)
-    } catch (error) {
-      console.error(`Error exporting ${format}:`, error)
-      alert(`Failed to export ${format} file`)
-    } finally {
-      setExporting(false)
-    }
+  const exportServiceHistory = (format: 'excel' | 'pdf') => {
+  if (filteredHistory.length === 0) {
+    alert('No item on search found.')
+    return
   }
+
+  setExporting(true)
+
+  try {
+    if (format === 'excel') {
+      // Prepare only filtered data
+      const exportData = filteredHistory.map(item => ({
+        Company: item.company || 'N/A',
+        Location: item.location || 'N/A',
+        Type: item.contract_type || 'N/A',
+        Model: item.model || 'N/A',
+        Serial: item.serial || 'N/A',
+        'Date of PMS': item.service_date || 'N/A',
+        Technician: item.technician || 'N/A',
+        SR: item.sr_number || 'N/A',
+      }))
+
+      // Generate Excel
+      const ws = XLSX.utils.json_to_sheet(exportData)
+      const wb = XLSX.utils.book_new()
+      XLSX.utils.book_append_sheet(wb, ws, 'Filtered History')
+
+      // File name (optional with search term)
+      const searchSuffix = searchTerm ? `_${searchTerm}` : ''
+      const fileName = `service_history${searchSuffix}.xlsx`
+
+      XLSX.writeFile(wb, fileName)
+    } else {
+      alert('PDF export is not yet implemented for filtered results.')
+    }
+  } catch (error) {
+    console.error('Error exporting:', error)
+    alert('Failed to export file.')
+  } finally {
+    setExporting(false)
+  }
+}
 
 
 
