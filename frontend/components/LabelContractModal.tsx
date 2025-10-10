@@ -187,12 +187,12 @@ export default function LabelContractModal({ contract, onClose, onSave }: LabelC
                 <input className="input py-2 text-sm" placeholder="Enter end user" value={formData.end_user} onChange={e => handleInputChange('end_user', e.target.value)} required />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Part Number *</label>
-                <textarea className="input py-2 text-sm" placeholder="Enter part number" value={formData.part_number} onChange={e => handleInputChange('part_number', e.target.value)} required />
+                <label className="block text-sm font-medium text-gray-700 mb-1">Part Number </label>
+                <textarea className="input py-2 text-sm" placeholder="Enter part number" value={formData.part_number} onChange={e => handleInputChange('part_number', e.target.value)} />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Serial Number *</label>
-                <textarea className="input py-2 text-sm" placeholder="Enter serial number" value={formData.serial} onChange={e => handleInputChange('serial', e.target.value)} required />
+                <label className="block text-sm font-medium text-gray-700 mb-1">Serial Number </label>
+                <textarea className="input py-2 text-sm" placeholder="Enter serial number" value={formData.serial} onChange={e => handleInputChange('serial', e.target.value)}  />
               </div>
               {/* Next PMS Schedule - Only show when editing */}
               {contract && (
@@ -268,8 +268,8 @@ export default function LabelContractModal({ contract, onClose, onSave }: LabelC
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">PO Number*</label>
-                <input className="input py-2 text-sm" placeholder="Enter PO number" value={formData.po_number} onChange={e => handleInputChange('po_number', e.target.value)} required />
+                <label className="block text-sm font-medium text-gray-700 mb-1">PO Number</label>
+                <input className="input py-2 text-sm" placeholder="Enter PO number" value={formData.po_number} onChange={e => handleInputChange('po_number', e.target.value)}  />
               </div>
               {/* <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Frequency</label>
