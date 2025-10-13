@@ -670,3 +670,20 @@ async def fetch_report_data(supabase, contract_type=None, status=None, start_dat
         data["label"] = label_response.data
     
     return data
+
+from fastapi import Body, HTTPException
+
+@router.put("/service-history/{id}")
+async def update_service_history(id: str, data: dict = Body(...)):
+    supabase = get_supabase()
+    try:
+        result = supabase.table("service_history").update(data).eq("id", id).execute()
+
+        if not result.data:
+            raise HTTPException(status_code=404, detail="Record not found")
+
+        return {"message": "Service updated", "data": result.data[0]}
+
+    except Exception as e:
+        print("Error updating:", e)
+        raise HTTPException(status_code=500, detail=f"Failed to update service: {str(e)}")
