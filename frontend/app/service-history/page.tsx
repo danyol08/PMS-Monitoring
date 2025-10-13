@@ -10,6 +10,9 @@ import { Plus, Search, Filter, Calendar, Clock, CheckCircle, XCircle, Download, 
 import Loading from '../../components/Loading'
 import ImportModal from '../../components/ImportModal'
 import AddServiceHistoryModal from '../../components/AddServiceHistoryModal'
+import EditServiceHistoryModal from '../../components/EditServiceHistoryModal'
+
+
 
 interface ServiceHistory {
   id: string
@@ -81,7 +84,7 @@ export default function ServiceHistory() {
   const [showReportModal, setShowReportModal] = useState(false)
   const [isImportModalOpen, setIsImportModalOpen] = useState(false)
   const [isAddServiceHistoryModalOpen, setIsAddServiceHistoryModalOpen] = useState(false)
-  
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false)
   // Pagination states
   const [currentPage, setCurrentPage] = useState(1)
   const [rowsPerPage, setRowsPerPage] = useState(10)
@@ -197,7 +200,7 @@ export default function ServiceHistory() {
 
   const exportServiceHistory = (format: 'excel' | 'pdf') => {
   if (filteredHistory.length === 0) {
-    alert('No item on search found.')
+    alert('No item found.')
     return
   }
 
@@ -237,6 +240,7 @@ export default function ServiceHistory() {
     setExporting(false)
   }
 }
+
 
 
 
@@ -390,6 +394,9 @@ export default function ServiceHistory() {
                   <th className="px-4 py-2 text-left text-xs font-medium text-white uppercase tracking-wider">
                     SERVICE REPORT
                   </th>
+                  <th className="px-4 py-2 text-left text-xs font-medium text-white uppercase tracking-wider">
+                    ACTION
+                  </th>
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
@@ -461,6 +468,18 @@ export default function ServiceHistory() {
                         <span className="text-gray-400">No report</span>
                       )}
                     </td>
+                    <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900">
+                    <button
+                      onClick={() => {
+                        setSelectedService(service)
+                        setIsEditModalOpen(true)
+                      }}
+                      className="text-indigo-600 hover:text-indigo-800 flex items-center gap-1"
+                    >
+                      <FileText className="h-4 w-4" />
+                      Edit
+                    </button>
+                  </td>
                   </tr>
                 ))}
               </tbody>
@@ -735,6 +754,13 @@ export default function ServiceHistory() {
           isOpen={isAddServiceHistoryModalOpen}
           onClose={() => setIsAddServiceHistoryModalOpen(false)}
           onSuccess={() => { fetchServiceHistory(); setCurrentPage(1) }}
+          
+        />
+        <EditServiceHistoryModal
+          isOpen={isEditModalOpen}
+          onClose={() => setIsEditModalOpen(false)}
+          onSuccess={() => { fetchServiceHistory(); setCurrentPage(1) }}
+          service={selectedService}
         />
       </div>
     </DashboardLayout>
